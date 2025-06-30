@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+package greet;
+
+// グリーティングサービス
+service GreetingService {
+  // 単純なグリーティング
+  rpc SayHello(HelloRequest) returns (HelloResponse);
+  
+  // ストリーミンググリーティング
+  rpc SayHelloStreaming(HelloRequest) returns (stream HelloResponse);
+  
+  // 双方向ストリーミング
+  rpc SayHelloBidirectional(stream HelloRequest) returns (stream HelloResponse);
+}
+
+// リクエストメッセージ
+message HelloRequest {
+  string name = 1;
+  int32 age = 2;
+  repeated string interests = 3;
+}
+
+// レスポンスメッセージ
+message HelloResponse {
+  string message = 1;
+  int64 timestamp = 2;
+  ResponseStatus status = 3;
+}
+
+// ステータス列挙型
+enum ResponseStatus {
+  SUCCESS = 0;
+  ERROR = 1;
+  WARNING = 2;
+} 

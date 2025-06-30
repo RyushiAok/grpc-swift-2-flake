@@ -1,0 +1,45 @@
+{
+  "nodes": {
+    "grpc-swift-protobuf": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1748601251,
+        "narHash": "sha256-QDenQ4Dq88qhV8rsFC3scaZrGoR+nw7Bz7/9OZi6isg=",
+        "owner": "grpc",
+        "repo": "grpc-swift-protobuf",
+        "rev": "df605cde2957657a078eb754ed24f3a0e05d3f54",
+        "type": "github"
+      },
+      "original": {
+        "owner": "grpc",
+        "ref": "2.0.0",
+        "repo": "grpc-swift-protobuf",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1751011381,
+        "narHash": "sha256-krGXKxvkBhnrSC/kGBmg5MyupUUT5R6IBCLEzx9jhMM=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "30e2e2857ba47844aa71991daa6ed1fc678bcbb7",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "grpc-swift-protobuf": "grpc-swift-protobuf",
+        "nixpkgs": "nixpkgs"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
