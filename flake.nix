@@ -16,7 +16,6 @@
     }:
     let
       systems = [
-        "x86_64-linux"
         "aarch64-darwin"
         "x86_64-darwin"
       ];
@@ -129,7 +128,7 @@
             mkdir -p "$OUTPUT_DIR"
 
             for proto_file in "''${PROTO_FILES[@]}"; do
-              ${pkgs.protobuf}/bin/protoc --proto_path="$PROTO_DIR" --swift_out="$OUTPUT_DIR" "$proto_file"
+              ${pkgs.protobuf}/bin/protoc --proto_path="$PROTO_DIR" --plugin=protoc-gen-swift=${pkgs.protoc-gen-swift}/bin/protoc-gen-swift --swift_out="$OUTPUT_DIR" "$proto_file"
               ${pkgs.protobuf}/bin/protoc --proto_path="$PROTO_DIR" --plugin="$PLUGIN_PATH" --grpc-swift-2_out="$OUTPUT_DIR" "$proto_file"
             done
 
