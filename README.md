@@ -3,7 +3,6 @@
 > [!NOTE]
 > This is a naive gRPC Swift 2 support until nixpkgs officially supports Swift 6.
 
-A Nix flake for gRPC Swift 2.0 development environment using locally built `grpc-swift-protobuf`.
 
 ## Usage
 
